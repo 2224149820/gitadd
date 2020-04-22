@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+        }
+        ul li{
+            margin-right: 10px;
+        }
+        ul li strong{
+            position: relative;
+            padding: 5px 30px;
+            background: #27ae60;
+            text-transform: uppercase;
+            cursor: pointer;
+            z-index: 1;
+        }
+        ul li strong + div{
+            display: flex;
+            flex-direction: column;
+            background: #95a5a6;
+            padding: 10px;
+            transform: scale(0);
+            transition: .6s;
+        }
+        ul li strong + div a{
+            color: white;
+            text-decoration: none;
+        }
+        ul li:hover  strong + div{
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+<main>
+    <ul>
+        <li>
+            <strong>video</strong>
+            <div>
+                <a href="">HDCMS</a>
+                <a href="">PHP</a>
+            </div>
+        </li>
+        <li>
+            <strong>live</strong>
+            <div>
+                <a href="">LINUX</a>
+                <a href="">CSS3</a>
+            </div>
+        </li>
+    </ul>
+</main>
+</body>
+</html>
