@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #2c3e50;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            /*cursor: pointer;*/
+        }
+
+        nav::after {
+            content: '后盾人';
+            border-radius: 50%;
+            background: #e74c3c;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            color: white;
+        }
+
+        nav::before {
+            content: '';
+            border-radius: 50%;
+            background: #e74c3c;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        nav:hover ul {
+            transform: scale(1);
+        }
+
+        ul {
+            width: 300px;
+            height: 300px;
+            /*background: black;*/
+            list-style-type: none;
+            position: relative;
+            transform: scale(0);
+            transition: .5s;
+        }
+
+        li {
+            width: 80px;
+            height: 80px;
+            background: #e74c3c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            color: white;
+            border-radius: 50%;
+            position: absolute;
+            transform-origin: 150px 150px;
+            transition: 2s;
+        }
+
+        ul li span {
+            transition: 1s;
+        }
+
+        nav:hover li:nth-child(1) {
+            transform: rotateZ(40deg);
+        }
+
+        nav:hover li:nth-child(1) span {
+            transform: rotateZ(320deg);
+        }
+
+        nav:hover li:nth-child(2) {
+            transform: rotateZ(80deg);
+        }
+
+        nav:hover li:nth-child(2) span {
+            transform: rotateZ(640deg);
+        }
+
+        nav:hover li:nth-child(3) {
+            transform: rotateZ(120deg);
+        }
+
+        nav:hover li:nth-child(3) span {
+            transform: rotateZ(960deg);
+        }
+
+        nav:hover li:nth-child(4) {
+            transform: rotateZ(160deg);
+        }
+
+        nav:hover li:nth-child(4) span {
+            transform: rotateZ(1280deg);
+        }
+
+        nav:hover li:nth-child(5) {
+            transform: rotateZ(200deg);
+        }
+
+        nav:hover li:nth-child(5) span {
+            transform: rotateZ(1600deg);
+        }
+
+        nav:hover li:nth-child(6) {
+            transform: rotateZ(240deg);
+        }
+
+        nav:hover li:nth-child(6) span {
+            transform: rotateZ(1920deg);
+        }
+
+        nav:hover li:nth-child(7) {
+            transform: rotateZ(280deg);
+        }
+
+        nav:hover li:nth-child(7) span {
+            transform: rotateZ(2240deg);
+        }
+
+        nav:hover li:nth-child(8) {
+            transform: rotateZ(320deg);
+        }
+
+        nav:hover li:nth-child(8) span {
+            transform: rotateZ(2560deg);
+        }
+
+        nav:hover li:nth-child(9) {
+            transform: rotateZ(360deg);
+        }
+
+        nav:hover li:nth-child(9) span {
+            transform: rotateZ(3240deg);
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><span>1</span></li>
+        <li><span>2</span></li>
+        <li><span>3</span></li>
+        <li><span>4</span></li>
+        <li><span>5</span></li>
+        <li><span>6</span></li>
+        <li><span>7</span></li>
+        <li><span>8</span></li>
+        <li><span>9</span></li>
+    </ul>
+</nav>
+</body>
+</html>
