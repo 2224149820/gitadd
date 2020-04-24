@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template-rows: 10vh 1fr 10vh;
+        }
+
+        header {
+            background: #e67e22;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            font-weight: bold;
+            color: white;
+        }
+
+        main {
+            background: url("bg.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            width: 80vw;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            opacity: .8;
+            box-shadow: 0 0 10px rgba(0,0,0,.8);
+        }
+
+        div:nth-child(1){
+            transform: translateY(-50px);
+            background: #9b59b6;
+        }
+        div:nth-child(2){
+            background: #e74c3c;
+        }
+
+        footer {
+            background: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header>后盾人</header>
+<main>
+    <div>
+        就在这段文字在电脑屏幕上延续的时候，数字显示：全球新冠肺炎确诊人数已超过249万，死亡达到17万多人。在经过连续三个月的疫情报道之后，我们邀请13位不同领域的思考者，试图回答“什么将被病毒彻底改变”这一问题。没有人能够确切地知道会发生什么，但是所有的参与者都相信，危机时刻也给我们带来机遇，通过更健康、更包容的生活态度；更先进、更人性的现代技术；更有效、更良善的治理方式，在共同度过一个不确定的时期之后，“后新冠时代”终将给我们带来更多新的进步。
+    </div>
+    <div>
+        从问题的角度来看，有三方面是较为重要的。第一，如果缺乏社会力量和对不同的声音包容，就搞不好社区建设；第二，国家如果无法承担“元治理”职能，同样也搞不好社区建设；第三，社区层面的危机管理和公共安全规划也暴露出了不足。具体到社区安全层面，基本演练、基础设施、场地空间、应急物资、风险意识、防控宣传等均需有所反思。
+    </div>
+</main>
+<footer>houdunren.com</footer>
+</body>
+</html>

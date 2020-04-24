@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #2c3e50;
+        }
+
+        main {
+            position: relative;
+        }
+
+        main div {
+            font-size: 2em;
+            color: white;
+            position: absolute;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+
+        .heart div {
+            transform: scale(3);
+            color: orangered;
+            opacity: 0;
+        }
+
+        .heart div:nth-child(2) {
+            transform: scale(1);
+            color: orangered;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<main onclick="change()">
+    <div>赞</div>
+    <div>赞</div>
+</main>
+<script>
+    function change() {
+        $('main').toggleClass('heart');
+    }
+</script>
+</body>
+</html>
