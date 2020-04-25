@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        main {
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        article {
+            display: grid;
+            grid-template: 1fr / repeat(4, 400px);
+            animation-name: slide;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(4, end);
+        }
+
+        article:hover, article:hover + ul::after {
+            animation-play-state: paused;
+        }
+
+        div {
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        @keyframes slide {
+            to {
+                transform: translateX(-1600px);
+            }
+        }
+
+        ul {
+            width: 200px;
+            position: absolute;
+            left: 50%;
+            bottom: 50px;
+            transform: translateX(-50%);
+            list-style-type: none;
+            display: grid;
+            grid-template: 1fr / repeat(4, 1fr);
+            justify-items: center;
+        }
+
+        ul::after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            left: 15px;
+            background: #e67e22;
+            z-index: -1;
+            animation-name: num;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(4, end);
+        }
+
+        li {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            color: white;
+            font-size: .8em;
+        }
+
+        @keyframes num {
+            to {
+                transform: translateX(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <article>
+        <div><img src="1.jpg"></div>
+        <div><img src="2.jpg"></div>
+        <div><img src="3.jpg"></div>
+        <div><img src="4.jpg"></div>
+    </article>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</main>
+</body>
+</html>
