@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+最新课程 <q>HTML开启WEB征途</q> 已经发布了
+
+<form action="hd.php" method="POST" novalidate>
+    <fieldset>
+        <legend>文本框</legend>
+        <input type="text" name="title" required placeholder="请输入标题" maxlength="5" value="" size="100">
+    </fieldset>
+</form>
+
+<form action="">
+    <input type="text" name="username" pattern="[A-z]{5,20}"
+           oninvalid="validate('请输入5~20位字母的用户名')">
+    <button>提交</button>
+</form>
+
+<script>
+    function validate(message) {
+        alert(message);
+    }
+</script>
+
+<select name="lesson">
+    <option value="">== 选择课程 ==</option>
+    <optgroup label="后台">
+        <option value="php">PHP</option>
+        <option value="linux">LINUX</option>
+        <option value="mysql">MYSQL</option>
+    </optgroup>
+    <optgroup label="前台">
+        <option value="php">HTML</option>
+        <option value="linux">JAVASCRIPT</option>
+        <option value="mysql">CSS</option>
+    </optgroup>
+</select>
+
+<input type="date" step="5" min="2020-09-22" max="2025-01-15" name="datetime">
+<input type="week">
+
+<form action="" method="post">
+    <input type="text" list="lesson">
+    <datalist id="lesson">
+        <option value="PHP">后台管理语言</option>
+        <option value="CSS">美化网站页面</option>
+        <option value="MYSQL">掌握数据库使用</option>
+    </datalist>
+</form>
+
+<form action="">
+    <input type="search" autocomplete="on" name="content" />
+    <button>提交</button>
+</form>
+
+</body>
+</html>
